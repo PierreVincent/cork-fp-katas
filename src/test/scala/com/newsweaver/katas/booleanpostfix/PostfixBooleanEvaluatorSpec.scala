@@ -25,4 +25,12 @@ class PostfixBooleanEvaluatorSpec extends FunSpec with Matchers {
     }
   }
 
+  describe("PostfixBooleanEvaluator2") {
+    sampleResults.foreach { case (expression, result) =>
+      it(s"should evaluate $expression to $result") {
+        PostfixBooleanEvaluator2.evaluate(expression) shouldBe result
+      }
+    }
+  }
+
 }
